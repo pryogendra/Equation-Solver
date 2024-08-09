@@ -1,0 +1,54 @@
+<Linear>
+    MDBoxLayout:
+        size:root.size
+        orientation:'vertical'
+        padding:100
+        MDLabel:
+            text:"Linear Equation"
+            pos_hint:{'center_x':0.8}
+            size_hint:1,0.5
+            font_size:55
+            bold:True
+        MDBoxLayout:
+            orientation:'horizontal'
+            pos_hint:{'center_x':0.85}
+            size_hint:1,0.5
+            spacing:20
+            padding:30
+            MDTextField:
+                id: x
+                hint_text: "X"
+                size_hint_x: None
+                width: 40
+                pos_hint:{'top':1}
+            MDLabel:
+                text: "  +  "
+                size_hint: None, None
+                size: self.texture_size
+                pos_hint:{'top':1}
+            MDTextField:
+                id: b
+                hint_text: ""
+                size_hint_x: None
+                width: 40
+                pos_hint:{'top':1}
+            MDLabel:
+                text: "  =  "
+                size_hint: None, None
+                size: self.texture_size
+                pos_hint:{'top':1}
+            MDTextField:
+                id: n
+                hint_text: ""
+                size_hint_x: None
+                width: 40
+                pos_hint:{'top':1}
+
+        MDRaisedButton:
+            size_hint:0.3,0.1
+            text:'Solve'
+            pos_hint:{'center_x':0.57,}
+            on_press:root.solve()
+        MDRaisedButton:
+            text:'BACK'
+            on_press:app.back()

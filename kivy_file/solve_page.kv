@@ -1,0 +1,16 @@
+<SolvePage>
+    MDBoxLayout:
+        padding:20
+        spacing:40
+        size:root.size
+        orientation:'vertical'
+        MDTextField:
+            id:result
+            hint_text: "-------------------- EQUATION SOLUTION ----------------"
+            text:"Solution in not Exists...................."
+            multiline:True
+            font_size:20
+            helper_text_mode: "on_focus"
+    MDRaisedButton:
+        text:'BACK'
+        on_press:app.back()

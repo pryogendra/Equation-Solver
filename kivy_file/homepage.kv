@@ -1,0 +1,28 @@
+<HomePage>
+    MDBoxLayout:
+        size:root.size
+        orientation:'vertical'
+        MDLabel:
+            text:"AI Equation Solver"
+            pos_hint:{'center_x':0.8}
+            font_size:55
+            bold:True
+        MDBoxLayout:
+            orientation:'horizontal'
+            padding:90
+            spacing:100
+            MDRectangleFlatButton:
+                text:"Linear"
+                font_size:30
+                pos_hint:{'top':1}
+                on_press:app.Linear()
+            MDRectangleFlatButton:
+                text:"Quadratic"
+                font_size:30
+                pos_hint:{'top':1}
+                on_press:app.Quadratic()
+            MDRectangleFlatButton:
+                text:"Cubic"
+                font_size:30
+                pos_hint:{'top':1}
+                on_press:app.Cubic()
